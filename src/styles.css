@@ -3,6 +3,17 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 :root {
-  --mainColor:#1abc9c;
-  --secondColor:#2C3E50 ;
+  --mainColor: #1abc9c;
+  --secondColor: #2c3e50;
+}
+.portfolio .sharedStar div,
+.contact .sharedStar div {
+  background-color: var(--secondColor);
+}
+.about .sharedStar div,
+.home .sharedStar div {
+  background-color: white;
+}
+.about .sharedStar i {
+  color: white;
 }

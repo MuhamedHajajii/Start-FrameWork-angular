@@ -7,39 +7,29 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
   flagUserName: boolean = false;
-  userName: string = '';
-  userNameInput(): void {
-    if (this.userName.length > 0 && this.userName != '') {
+  flagAge: boolean = false;
+  flagEmail: boolean = false;
+  flagPassWord: boolean = false;
+  userNameInput(e: any, name: string): void {
+    if (e.target.value != '' && name == 'userName') {
       this.flagUserName = true;
-    } else {
+    } else if (e.target.value == '' && name == 'userName') {
       this.flagUserName = false;
     }
-  }
-  flagAge: boolean = false;
-  userAge: number = 0;
-  userAgeInput(): void {
-    if (this.userAge > 0) {
+    if (e.target.value != '' && name == 'userAge') {
       this.flagAge = true;
-    } else {
+    } else if (e.target.value == '' && name == 'userAge') {
       this.flagAge = false;
     }
-  }
-  flagPassWord: boolean = false;
-  userPassWord: number = 0;
-  userPassWordInput(): void {
-    if (this.userPassWord > 0) {
-      this.flagPassWord = true;
-    } else {
-      this.flagPassWord = false;
-    }
-  }
-  flagEmail: boolean = false;
-  userEmail: string = '';
-  userEmailInput(): void {
-    if (this.userEmail.length > 0 && this.userEmail != '') {
+    if (e.target.value != '' && name == 'userEmail') {
       this.flagEmail = true;
-    } else {
+    } else if (e.target.value == '' && name == 'userEmail') {
       this.flagEmail = false;
+    }
+    if (e.target.value != '' && name == 'userPassword') {
+      this.flagPassWord = true;
+    } else if (e.target.value == '' && name == 'userPassword') {
+      this.flagPassWord = false;
     }
   }
 }

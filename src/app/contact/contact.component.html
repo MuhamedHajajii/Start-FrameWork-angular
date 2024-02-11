@@ -1,29 +1,27 @@
 <div class="h-100 pt-4">
   <div class="container text-center h-100 pt-3">
     <h2 class="text-uppercase fs-1 fw-bolder m-0">conatct section</h2>
-    <div class="d-flex align-items-center justify-content-center my-1">
-      <div [style]="'height:4px;width:80px;background-color:var(--secondColor);'" class="me-3 my-3"></div>
-      <i _ngcontent-ihy-c6="" class="fa-solid fa-star"></i>
-      <div [style]="'height:4px;width:80px;background-color:var(--secondColor);'" class="ms-3 my-3 "></div>
+    <div class="contact">
+      <app-star-shared></app-star-shared>
     </div>
     <div>
       <label [class.active]="flagUserName" class="p-3" for="userName">userName</label>
-      <input [(ngModel)]="userName" (keyup)="userNameInput()" id="userName" placeholder="userName"
+      <input (input)="userNameInput($event,'userName')" id="userName" placeholder="userName"
         class="border-0 border-bottom rounded-2 p-3 w-100" type="text">
     </div>
     <div>
       <label [class.active]="flagAge" class="p-3" for="userAge">userAge</label>
-      <input [(ngModel)]="userAge" (keyup)="userAgeInput()" id="userAge" placeholder="userAge"
+      <input (input)="userNameInput($event,'userAge')" id="userAge" placeholder="userAge"
         class="border-0 border-bottom rounded-2 p-3 w-100" type="number">
     </div>
     <div>
       <label [class.active]="flagEmail" class="p-3" for="userEmail">userEmail</label>
-      <input [(ngModel)]="userEmail" (keyup)="userEmailInput()" id="userEmail" placeholder="userEmail"
+      <input (input)="userNameInput($event,'userEmail')" id="userEmail" placeholder="userEmail"
         class="border-0 border-bottom rounded-2 p-3 w-100" type="email">
     </div>
     <div>
       <label [class.active]="flagPassWord" class="p-3" for="userPassowrd">userPassowrd</label>
-      <input [(ngModel)]="userPassWord" (keyup)="userPassWordInput()" id="userPassowrd" placeholder="userPassowrd"
+      <input (input)="userNameInput($event,'userPassword')" id="userPassowrd" placeholder="userPassowrd"
         class="border-0 border-bottom rounded-2 p-3 w-100" type="password">
     </div>
     <button [style]="'background-color:var(--mainColor);'" class="my-3 btn text-white d-block me-auto">send

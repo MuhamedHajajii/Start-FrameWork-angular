@@ -11,6 +11,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { FormsModule } from '@angular/forms';
+import { StarSharedComponent } from './star-shared/star-shared.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     FooterComponent,
     NotfoundComponent,
+    StarSharedComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

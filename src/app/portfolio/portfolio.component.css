@@ -1,0 +1,17 @@
+.col .layer {
+  opacity: 0;
+  cursor: pointer;
+  transition: all 0.6s;
+}
+.col .layer:hover {
+  opacity: 1;
+}
+
+.lightbox {
+  z-index: 1050;
+  cursor: pointer;
+}
+
+.lightbox img {
+  cursor: initial;
+}

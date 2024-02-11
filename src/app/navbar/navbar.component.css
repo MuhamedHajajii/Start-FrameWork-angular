@@ -1,0 +1,7 @@
+.nav-link.active {
+  background-color: var(--mainColor);
+}
+
+.nav-item {
+  width: fit-content;
+}

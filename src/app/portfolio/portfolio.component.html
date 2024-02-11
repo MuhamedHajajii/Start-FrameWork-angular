@@ -1,0 +1,30 @@
+<div class="h-100 pt-4">
+  <div class="container text-center h-100 pt-3">
+    <h2 class="text-uppercase fs-1 fw-bolder m-0">portfolio component</h2>
+    <div class="d-flex align-items-center justify-content-center my-1">
+      <div [style]="'height:4px;width:80px;background-color:var(--secondColor);'" class="me-3 my-3"></div>
+      <i _ngcontent-ihy-c6="" class="fa-solid fa-star"></i>
+      <div [style]="'height:4px;width:80px;background-color:var(--secondColor);'" class="ms-3 my-3 "></div>
+    </div>
+    <div class="row g-5 row-cols-1 row-cols-md-2 row-cols-lg-3">
+      <div *ngFor="let images of imagesURL ; index as index" class="col rounded-3">
+        <div class="position-relative">
+          <img class="w-100 rounded-3" src="{{images}}" alt="poert1">
+          <div [style]="'background-color:#1abc9ce6;'" (click)="openLightBox();currentImageIndex(index)"
+            class="d-flex justify-content-center align-items-center layer rounded-3 position-absolute top-0 bottom-0 start-0 end-0">
+            <i _ngcontent-dov-c19="" class="text-white fa-solid fa-plus fa-6x"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div [ngClass]="{'d-none':flag}" (click)="closeLightBox($event)" [style]="'background-color:rgba(0,0,0,.25);'"
+      class="lightbox position-fixed top-0 bottom-0 start-0 end-0 d-flex justify-content-center align-items-center">
+      <div class=" position-relative">
+        <button class="text-white btn btn-secondary position-absolute top-0 end-0 m-3"><i
+            class="fa-solid fa-xmark"></i></button>
+        <img (click)="imgLightBox($event)" [style]="'width:600px;'" class="rounded-3" [src]="imagesURL[currentImage]"
+          alt="poert1">
+      </div>
+    </div>
+  </div>
+</div>

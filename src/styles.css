@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+:root {
+  --mainColor:#1abc9c;
+  --secondColor:#2C3E50 ;
+}
